@@ -18,7 +18,7 @@ const Fourth = () => {
     <main>
       <section
         id='contact'
-        className='text-white pb-[200px] grid grid-cols-1 md:min-h-screen md:grid md:grid-cols-2 px-5 md:px-16 md:pt-40 md:pb-0'
+        className='text-white pb-[20px] grid grid-cols-1 md:min-h-screen md:grid md:grid-cols-2 px-5 md:px-16 md:pt-40 md:pb-0'
       >
         <div
           data-aos='fade-down'
