@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=' z-20 h-32 flex  items-center w-full justify-around'>
+    <div className='text-white z-20 h-32 flex  items-center w-full justify-around'>
       <div>
         <h1 className=' mx-16 md:mx-0  rubik w-0 text-[36px] text-red-200'>LUIGIE PIZZA</h1>
       </div>
