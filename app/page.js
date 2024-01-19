@@ -17,7 +17,7 @@ export default function Home() {
       <Third/>
 
       <Fourth/>
-      <ScrollToTop smooth style={{
+      <ScrollToTop className="hidden md:block" smooth style={{
           backgroundColor: 'white', // Choose your color
           color: 'purple', // Choose your text color
           padding: '5px', // Adjust the padding for comfort
