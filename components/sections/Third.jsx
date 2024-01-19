@@ -15,7 +15,7 @@ const Third = () => {
     });
   }, []);
   return (
-    <section id='menu' className='md:min-h-screen p-16  genos '>
+    <section id='menu' className='text-white md:min-h-screen p-16  genos '>
           <div className='text-center text-4xl pb-10'>Available now</div>
         <div className='grid grid-cols-1 gap-5 md:grid md:grid-cols-3 md:gap-4'>
              

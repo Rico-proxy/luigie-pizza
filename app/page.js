@@ -9,7 +9,7 @@ export default function Home() {
   
   
   return (
-    <main  className="  overflow-hidden   flex flex-col justify-between space-y-[100px] ">
+    <main  className="bg-black  overflow-hidden   flex flex-col justify-between space-y-[100px] ">
       <First/>
       
       <Second/>
