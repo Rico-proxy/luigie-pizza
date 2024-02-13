@@ -1,9 +1,10 @@
-"use client"
+
 import First from "@/components/sections/First";
 import Fourth from "@/components/sections/Fourth";
+import Scroll from "@/components/sections/Scroll";
 import Second from "@/components/sections/Second";
 import Third from "@/components/sections/Third";
-import ScrollToTop from "react-scroll-to-top";
+
 
 export default function Home() {
   
@@ -17,12 +18,7 @@ export default function Home() {
       <Third/>
 
       <Fourth/>
-      <ScrollToTop className="hidden md:block" smooth style={{
-          backgroundColor: 'white', // Choose your color
-          color: 'purple', // Choose your text color
-          padding: '5px', // Adjust the padding for comfort
-          
-        }}/>
+      <Scroll/>
     </main>
   )
 }

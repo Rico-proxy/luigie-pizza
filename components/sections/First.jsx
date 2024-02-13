@@ -15,7 +15,7 @@ const First = () => {
 
   return (
     <section id='home' data-aos-anchor-placement="bottom-bottom" className="md:min-h-screen text-[50px] h-min-screen text-pink-200 px-5 pt-20 md:pt-0 md:text-[66px] md:mx-[50vh] genos md:animate-pulse md:p-16 font-extrabold">
-      <h1 className="md:flex md:flex-row items-center md:w-[2px] italic">
+      <h1 className=" md:flex md:flex-row items-center md:w-[2px] italic">
         <span
           data-aos="fade-right"
        
