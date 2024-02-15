@@ -32,7 +32,7 @@ const Call = () => {
       className=""
     >
       
-      <Lottie  options={lottieOptions} className='h-[20px] w-[20px] md:h-[20px] md:w-[20px]'/>
+      <Lottie  options={lottieOptions} className='h-[20px] w-[20px] lg:h-[20px] lg:w-[20px]'/>
 
     </div>
   );

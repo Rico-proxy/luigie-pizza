@@ -28,7 +28,7 @@ const Pizza = () => {
       data-aos-offset="100"
       data-aos-easing="ease-in-sine"
       data-aos-delay="50"
-      className='hidden md:block'>
+      className='hidden lg:block'>
         <Lottie options={lottieOptions} height={470} width={470} />
       </div>
     );

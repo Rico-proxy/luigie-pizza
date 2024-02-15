@@ -14,8 +14,8 @@ const First = () => {
   }, []);
 
   return (
-    <section id='home' data-aos-anchor-placement="bottom-bottom" className="md:min-h-screen text-[50px] h-min-screen text-pink-200 px-5 pt-20 md:pt-0 md:text-[66px] md:mx-[50vh] genos md:animate-pulse md:p-16 font-extrabold">
-      <h1 className=" md:flex md:flex-row items-center md:w-[2px] italic">
+    <section id='home' data-aos-anchor-placement="bottom-bottom" className="lg:min-h-screen text-[50px] h-min-screen text-pink-200 px-5 pt-20 lg:pt-0 lg:text-[66px] lg:mx-[50vh] genos lg:animate-pulse lg:p-16 font-extrabold">
+      <h1 className=" lg:flex lg:flex-row items-center lg:w-[2px] italic">
         <span
           data-aos="fade-right"
        

@@ -6,9 +6,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 import pizzaData from '@/pizzadata/pizza';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Third = () => {
   const [windowWidth, setWindowWidth] = useState(0);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredPizzaData, setFilteredPizzaData] = useState(pizzaData);
 
   useEffect(() => {
     // Update windowWidth on resize
@@ -25,21 +28,40 @@ const Third = () => {
     };
   }, []);
 
-  const showItemCount = windowWidth < 768 ? 3 : pizzaData.length;
+  useEffect(() => {
+    // Filter pizzaData based on searchQuery
+    const filteredData = pizzaData.filter((pizza) =>
+      pizza.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredPizzaData(filteredData);
+  }, [searchQuery]);
+
+  const showItemCount = windowWidth < 768 ? 3 : filteredPizzaData.length;
 
   return (
-    <section id='menu' className='text-white md:min-h-screen p-16 genos'>
-      <div className='text-center text-4xl pb-10'>Available now</div>
-      <div className='grid grid-cols-1 gap-5 md:grid md:grid-cols-3 md:gap-4'>
-        {pizzaData.slice(0, showItemCount).map((pizza, index) => (
+    <section id='menu' className='text-white lg:min-h-screen p-16 genos'>
+      <div className='text-center text-4xl pb-10 text-red-200'>Available now</div>
+      <div  className='lg:mb-8 lg:pl-7 text-center py-4'>
+        <input
+        
+          type='text'
+          placeholder='Search by name'
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className='px-4 py-2 border font-bold hover:bg-black hover:border hover:border-red-200 hover:text-red-200 bg-white  focus:outline-none rounded-md text-black'
+          id='search'
+        />
+      </div>
+      <div className='grid grid-cols-1 gap-5 lg:grid lg:grid-cols-3 lg:gap-4'>
+        {filteredPizzaData.slice(0, showItemCount).map((pizza, index) => (
           <div
             key={index}
             data-aos={index % 3 === 0 ? 'fade-left' : index % 3 === 1 ? 'fade-down' : 'fade-right'}
-            data-aos-offset='150'
+            data-aos-offset='50'
             data-aos-easing='ease-in-sine'
             data-aos-delay={100 * index} // Adding delay based on index
             className={`mx-auto border border-white p-4 space-y-3 rounded-3xl text-center max-w-xs ${
-              windowWidth < 768 ? 'md:w-full' : 'md:w-96' // Adjust styles based on screen width
+              windowWidth < 768 ? 'lg:w-full' : 'lg:w-96' // Adjust styles based on screen width
             }`}
           >
             <div>
@@ -55,8 +77,10 @@ const Third = () => {
           </div>
         ))}
         {windowWidth < 768 && (
-          <div className='flex items-center text-3xl text-red-200 pt-10 md:hidden'>
-            <Link href=''>see more </Link>
+          <div  className='flex items-center text-3xl text-red-200 pt-10 lg:hidden'>
+            <ScrollLink to='search' smooth={true} duration={100}>
+               see more
+           </ScrollLink>
             <BsArrowRight className='text-pink-200 pl-2' />
           </div>
         )}
