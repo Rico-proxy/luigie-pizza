@@ -41,7 +41,7 @@ const Third = () => {
   return (
     <section id='menu' className='text-white lg:min-h-screen p-16 genos'>
       <div className='text-center text-4xl pb-10 text-red-200'>Available now</div>
-      <div  className='lg:mb-8 lg:pl-7 text-center py-4'>
+      <div  className='lg:mb-8 lg:pl-7 lg:text-center py-4 '>
         <input
         
           type='text'
