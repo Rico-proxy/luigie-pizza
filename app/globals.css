@@ -17,3 +17,29 @@
 .genos{
   font-family: 'Genos', sans-serif;
 }
+.neonText {
+   
+  text-shadow: 0 0 10px rgba(248, 113, 207, 0.4),
+               0 0 20px rgba(248, 113, 207, 0.6),
+               0 0 30px rgba(248, 113, 207, 0.8),
+               0 0 40px rgba(248, 113, 207, 1),
+               0 0 50px rgba(248, 113, 207, 1.2),
+               0 0 60px rgba(248, 113, 207, 1.4),
+               0 0 70px rgba(248, 113, 207, 1.6),
+               0 0 80px rgba(248, 113, 207, 1.8);
+               
+  text-decoration: underline;
+  animation: neonEffect 11s linear forwards; /* Apply the neon effect animation */
+}
+
+@keyframes neonEffect {
+  /* Keyframes for the neon effect, same as before */
+
+  to {
+    text-shadow: none; /* Remove text shadow at the end of the animation */
+    color: #fdfdfd;
+    text-decoration: none;
+    border: white;
+    
+  }
+}
